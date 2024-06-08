@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,9 +6,8 @@ import instagramPic from "../public/assets/instagram.png";
 import facebookPic from "../public/assets/facebook.png";
 import linkedinPic from "../public/assets/linkedin.png";
 import whatsappPic from "../public/assets/whatsapp.png";
-
-const inter = Inter({ subsets: ["latin"] });
-const spaceMono = Space_Mono({ subsets: ["latin"], weight: ["400", "700"] });
+import { inter, spaceMono } from "./styles/fonts";
+import { usePathname } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Halalagric",
@@ -24,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`flex min-h-screen flex-col ${inter.className}`}>
         <header className="sticky top-0 flex items-center justify-between bg-white px-16">
           <div className="logo h-24 w-64 bg-[#D9D9D9]"></div>
           <nav className="flex items-center gap-4">
@@ -32,7 +30,7 @@ export default function RootLayout({
               <li>
                 <Link
                   href={"/about"}
-                  className="px-4 py-3 hover:bg-snow"
+                  className={`px-4 py-3 hover:bg-snow`}
                 >
                   About
                 </Link>
@@ -40,7 +38,7 @@ export default function RootLayout({
               <li>
                 <Link
                   href={"/visit"}
-                  className="px-4 py-3 hover:bg-snow"
+                  className={`px-4 py-3 hover:bg-snow`}
                 >
                   Visit
                 </Link>
@@ -48,7 +46,7 @@ export default function RootLayout({
               <li>
                 <Link
                   href={"/membership"}
-                  className="px-4 py-3 hover:bg-snow"
+                  className={`px-4 py-3 hover:bg-snow`}
                 >
                   Membership
                 </Link>
@@ -56,7 +54,7 @@ export default function RootLayout({
               <li>
                 <Link
                   href={"/contact"}
-                  className="px-4 py-3 hover:bg-snow"
+                  className={`px-4 py-3 hover:bg-snow`}
                 >
                   Contact
                 </Link>
@@ -187,7 +185,7 @@ export default function RootLayout({
                 </div>
                 <button
                   type="submit"
-                  className="rounded-pill mt-4 bg-white px-4 py-2 font-bold text-[#303030]"
+                  className="mt-4 rounded-pill bg-white px-4 py-2 font-bold text-[#303030]"
                 >
                   SUBMIT
                 </button>
@@ -209,7 +207,7 @@ export default function RootLayout({
                 </div>
                 <button
                   type="submit"
-                  className="rounded-pill mt-4 bg-white px-4 py-2 font-bold text-[#303030]"
+                  className="mt-4 rounded-pill bg-white px-4 py-2 font-bold text-[#303030]"
                 >
                   SUBMIT
                 </button>
@@ -231,7 +229,7 @@ export default function RootLayout({
                 </div>
                 <button
                   type="submit"
-                  className="rounded-pill mt-4 bg-white px-4 py-2 font-bold text-[#303030]"
+                  className="mt-4 rounded-pill bg-white px-4 py-2 font-bold text-[#303030]"
                 >
                   SUBMIT
                 </button>

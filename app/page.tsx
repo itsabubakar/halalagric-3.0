@@ -1,6 +1,5 @@
 import Image from "next/image";
 import jumbotronPic from "../public/assets/jumbotron.png";
-import { Space_Mono, Public_Sans } from "next/font/google";
 import Link from "next/link";
 
 import servicesPic from "../public/assets/services.png";
@@ -8,13 +7,11 @@ import consultingPic from "../public/assets/consulting.png";
 import farmShopPic from "../public/assets/farm-shop.png";
 import blogPic from "../public/assets/blog.png";
 import eventsPic from "../public/assets/events.png";
-
-const spaceMono = Space_Mono({ subsets: ["latin"], weight: ["400", "700"] });
-const publicSans = Public_Sans({ subsets: ["latin"], weight: ["400", "600"] });
+import { publicSans, spaceMono } from "./styles/fonts";
 
 export default function Home() {
   return (
-    <main className="bg-[#F3F3F3]">
+    <main className="bg-snow">
       <Image
         src={jumbotronPic}
         alt="farm"
