@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`flex min-h-screen flex-col ${inter.className}`}>
-        <header className="sticky top-0 flex items-center justify-between bg-white px-16">
+        <header className="sticky top-0 z-10 flex items-center justify-between bg-white px-16">
           <div className="logo h-24 w-64 bg-[#D9D9D9]"></div>
           <nav className="flex items-center gap-4">
             <ul className={`flex text-2xl font-normal italic ${spaceMono.className}`}>
